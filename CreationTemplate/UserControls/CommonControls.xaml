@@ -1,0 +1,129 @@
+﻿<UserControl x:Class="CreationTemplate.UserControls.CommonControls"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid x:Name="LayoutRoot">
+        <StackPanel>
+            <GroupBox Header="GroupBox">
+                This is a GroupBox
+            </GroupBox>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <GroupBox Grid.Column="0" Header="Buttons">
+                    <StackPanel>
+                        <Button Width="100" Content="Button"/>
+                        <Button Width="100" Content="Focused"/>
+                        <Button Width="100" Content="Disabled" IsEnabled="false"/>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Grid.Column="1" Header="TextBoxes">
+                    <StackPanel>
+                        <TextBox Width="100" Text="TextBox"/>
+                        <TextBox Width="100" Text="Focused"/>
+                        <TextBox Width="100" Text="Disabled" IsEnabled="false"/>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Grid.Column="2" Header="PasswordBoxes">
+                    <StackPanel>
+                        <PasswordBox Width="100" Password="TextBox"/>
+                        <PasswordBox Width="100" Password="TextBox"/>
+                        <PasswordBox Width="100" Password="TextBox" IsEnabled="false"/>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Grid.Column="3" Header="Label">
+                    <StackPanel>
+                        <Label Width="100" Content="Label"/>
+                        <Label Width="100" Content="Label Disabled" IsEnabled="false"/>
+                    </StackPanel>
+                </GroupBox>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="0.3*"/>
+                    <ColumnDefinition Width="0.4*"/>
+                </Grid.ColumnDefinitions>
+
+                <GroupBox Grid.Column="0" Header="ComboBox">
+                    <StackPanel>
+                        <ComboBox>
+                            <ComboBoxItem IsSelected="true">Combo Item 1</ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox IsEnabled="false" Margin="0,10,0,0">
+                            <ComboBoxItem IsSelected="true">Disabled</ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                </GroupBox>
+
+                <GroupBox Grid.Column="1" Header="ComboBox expanded">
+                    <ComboBox>
+                        <ComboBoxItem>Combo Item 1</ComboBoxItem>
+                        <ComboBoxItem>Combo Item 2</ComboBoxItem>
+                        <ComboBoxItem ToolTip="ToolTip">Combo Item 3</ComboBoxItem>
+                        <ComboBoxItem>Combo Item 4</ComboBoxItem>
+                        <ComboBoxItem>Combo Item 5</ComboBoxItem>
+                        <ComboBoxItem>Combo Item 6</ComboBoxItem>
+                    </ComboBox>
+                </GroupBox>
+
+                <GroupBox Grid.Column="2" Header="TreeView">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TreeView Grid.Column="0">
+                            <TreeViewItem Header="Root 1">
+                                <TreeViewItem Header="Item 1 1"/>
+                                <TreeViewItem Header="Item 1 2"/>
+                                <TreeViewItem Header="Item 1 3"/>
+                            </TreeViewItem>
+                            <TreeViewItem Header="Root 2">
+                                <TreeViewItem Header="Item 2 1"/>
+                            </TreeViewItem>
+                            <TreeViewItem Header="Root 3">
+                                <TreeViewItem Header="Item 5"/>
+                            </TreeViewItem>
+                            <TreeViewItem Header="Item 4"/>
+                            <TreeViewItem Header="Item 5"/>
+                        </TreeView>
+
+                        <TreeView Grid.Column="1" IsEnabled="false">
+                            <TreeViewItem Header="Root 1">
+                                <TreeViewItem Header="Item 1 1"/>
+                                <TreeViewItem Header="Item 1 2"/>
+                                <TreeViewItem Header="Item 1 3"/>
+                            </TreeViewItem>
+                            <TreeViewItem Header="Root 2">
+                                <TreeViewItem Header="Item 2 1"/>
+                            </TreeViewItem>
+                            <TreeViewItem Header="Root 3">
+                                <TreeViewItem Header="Item 5"/>
+                            </TreeViewItem>
+                            <TreeViewItem Header="Item 4"/>
+                            <TreeViewItem Header="Item 5"/>
+                        </TreeView>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+
+            <GroupBox Header="ProgressBar">
+                <StackPanel>
+                    <ProgressBar IsIndeterminate="true"/>
+                    <ProgressBar Value="45"/>
+                </StackPanel>
+            </GroupBox>
+
+        </StackPanel>
+    </Grid>
+</UserControl>
